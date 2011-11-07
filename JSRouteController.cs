@@ -58,7 +58,7 @@ namespace JSUtils
             foreach (string currentName in _nameSpaces)
             { 
                 _nameSpaceParsed = _nameSpaceParsed + currentName + '.';
-                string _nameSpaceToAppend = _nameSpaceParsed.Substring(0, _nameSpaceParsed.Length - 1);
+                string _nameSpaceToAppend = _nameSpaceParsed.Trim('.');
                 script.AppendFormat("{0} = {1};", _nameSpaceToAppend, "{}");
                 
             }
